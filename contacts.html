@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты — Цех ЖБИ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header>
+    <div class="header-row">
+      <div class="header-left">
+        <img src="images/logo.png" alt="Логотип ЖБИ" class="logo">
+        <div class="header-text">
+          <h1 class="header-title">ЦЕХ ПО ПРОИЗВОДСТВУ И ПРОДАЖЕ ЖБИ</h1>
+          <p class="header-subtitle">20 лет надёжного производства ЖБИ</p>
+        </div>
+      </div>
+      <div class="header-phone">
+        <i class="phone-icon">📞</i>
+        <a href="tel:+79050040488" class="phone-number">8-905-004-04-88</a>
+      </div>
+    </div>
+
+    <div class="header-row2">
+      <nav class="mainnav">
+        <ul class="mainnav__links">
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="products.html">Каталог</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts.html" class="active">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- КОНТЕНТ -->
+  <main class="container section">
+    <h2>Контакты</h2>
+
+    <div class="contacts-grid">
+
+      <div class="c-card">
+        <div class="c-icon">📍</div>
+        <h3>Как добраться?</h3>
+        <p>
+          г. Туймазы, республика Башкортостан,<br>
+          ул. Фабричная, 12а, 452757
+        </p>
+      </div>
+
+      <div class="c-card">
+        <div class="c-icon">✉️</div>
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:info@zbi-example.ru">info@zbi-example.ru</a>
+        </p>
+      </div>
+
+      <div class="c-card">
+        <div class="c-icon">📞</div>
+        <h3>Как связаться?</h3>
+        <p>
+          <a href="tel:+79050040488">8-905-004-04-88</a>
+        </p>
+      </div>
+
+      <div class="c-card">
+        <div class="c-icon">🕘</div>
+        <h3>Режим работы</h3>
+        <p>Пн.–Пт.: с 9:00 до 18:00</p>
+      </div>
+
+    </div>
+
+    <!-- Карта (работает без ключа) -->
+    <div class="map-wrap">
+      <iframe
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=г.+Туймазы,+республика+Башкортостан,+ул.+Фабричная+12а&output=embed">
+      </iframe>
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="container">© 2025 Цех ЖБИ</div>
+  </footer>
+
+</body>
+</html>
