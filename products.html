@@ -37,76 +37,178 @@
   </header>
 
   <!-- КАТАЛОГ -->
-  <main class="container section">
-    <h2>Каталог продукции</h2>
+  <main class="container">
+  <h2>Каталог продукции</h2>
 
-    <div class="product-grid">
-      <!-- Керамзитные блоки -->
-      <article class="card product-card">
-        <div class="product-thumb">
-          <img src="images/keramzit.jpg" alt="Керамзитные блоки" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Керамзитные блоки</h3>
-          <p class="muted">2-, 3- и 4-пустотные, 390×190×188 мм (ГОСТ)</p>
-          <div class="product-price">от <strong>65–75 ₽/шт</strong></div>
-        </div>
-      </article>
+  <section class="products-grid">
 
-      <!-- Фундаментные блоки -->
-      <article class="card product-card">
-        <div class="product-thumb">
-          <img src="images/fbs.jpg" alt="Фундаментные блоки ФБС" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Фундаментные блоки (ФБС)</h3>
-          <p class="muted">ГОСТ • ФБС 24.4.6, 12.4.6, 9.4.6</p>
-          <div class="product-price">от <strong>950–1400 ₽/шт</strong></div>
-        </div>
-      </article>
+    <!-- Керамзитные блоки -->
+    <article class="product-card">
+      <img src="images/keramzit.jpg" alt="Керамзитные блоки" class="product-card__img">
+      <h3>Керамзитные блоки</h3>
+      <p>2-, 3- и 4-пустотные, 390×190×188 мм (ГОСТ).</p>
+      <p class="product-card__price">от 65–75 ₽/шт</p>
+      <button class="btn-outline" data-modal="modal-keramzit">Подробнее</button>
+    </article>
 
-      <!-- Кольца -->
-      <article class="card product-card">
-        <div class="product-thumb">
-          <img src="images/kolca.jpeg" alt="Железобетонные кольца" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Ж/б кольца</h3>
-          <p class="muted">Диаметры: 1 м, 1.5 м, 2 м</p>
-          <div class="product-price">от <strong>1900–3800 ₽/шт</strong></div>
-        </div>
-      </article>
+    <!-- ФБС -->
+    <article class="product-card">
+      <img src="images/fbs.jpg" alt="Фундаментные блоки ФБС" class="product-card__img">
+      <h3>Фундаментные блоки (ФБС)</h3>
+      <p>ФБС 24.4.6, 12.4.6, 9.4.6 по ГОСТ.</p>
+      <p class="product-card__price">от 950–1400 ₽/шт</p>
+      <button class="btn-outline" data-modal="modal-fbs">Подробнее</button>
+    </article>
 
-      <!-- Погреб -->
-      <article class="card product-card">
-        <div class="product-thumb">
-          <img src="images/pogreb.jpg" alt="Железобетонный погреб" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Готовые погреба</h3>
-          <p class="muted">Внутр. 2×3×0.7 м, стенка 12 см</p>
-          <div class="product-price"><strong>от 45 000 ₽</strong> (ориентир)</div>
-        </div>
-      </article>
+    <!-- Кольца -->
+    <article class="product-card">
+      <img src="images/kolca.jpeg" alt="Железобетонные кольца" class="product-card__img">
+      <h3>Ж/б кольца</h3>
+      <p>Диаметры: 1 м, 1.5 м, 2 м.</p>
+      <p class="product-card__price">от 1900–3800 ₽/шт</p>
+      <button class="btn-outline" data-modal="modal-rings">Подробнее</button>
+    </article>
 
-      <!-- Цемент -->
-      <article class="card product-card">
-        <div class="product-thumb">
-          <img src="images/cement.jpg" alt="Цемент М400/М500" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Цемент</h3>
-          <p class="muted">М400 / М500 • мешки 50 кг, биг-бэг</p>
-          <div class="product-price"><strong>цена по запросу</strong></div>
-        </div>
-      </article>
+    <!-- Погреб -->
+    <article class="product-card">
+      <img src="images/cellar.jpg" alt="Железобетонный погреб" class="product-card__img">
+      <h3>Готовые погреба</h3>
+      <p>Внутр. 2×3×0.7 м, стенка 12 см.</p>
+      <p class="product-card__price">от 45 000 ₽ (ориентир)</p>
+      <button class="btn-outline" data-modal="modal-cellar">Подробнее</button>
+    </article>
+
+    <!-- Цемент -->
+    <article class="product-card">
+      <img src="images/cement.jpg" alt="Цемент М400/М500" class="product-card__img">
+      <h3>Цемент</h3>
+      <p>М400 / М500, мешки 50 кг, биг-бэг.</p>
+      <p class="product-card__price">цена по запросу</p>
+      <button class="btn-outline" data-modal="modal-cement">Подробнее</button>
+    </article>
+
+  </section>
+
+  <!-- МОДАЛЬНЫЕ ОКНА -->
+
+  <!-- Керамзитные блоки -->
+  <div class="modal" id="modal-keramzit">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Керамзитные блоки</h2>
+      <ul class="tech-list">
+        <li>Размер: 390×190×188 мм.</li>
+        <li>Типы: 2-, 3- и 4-пустотные.</li>
+        <li>Материал: керамзитобетон.</li>
+        <li>Применение: наружные и внутренние стены, перегородки.</li>
+      </ul>
+      <p class="price-note">Цена: 65–75 ₽/шт (средний уровень, зависит от партии).</p>
+      <p>Для расчёта пришлите площадь стен или количество рядов/блоков.</p>
+      <button class="btn" data-close>Закрыть</button>
     </div>
-  </main>
+  </div>
+
+  <!-- ФБС -->
+  <div class="modal" id="modal-fbs">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Фундаментные блоки (ФБС)</h2>
+      <ul class="tech-list">
+        <li>Марки: ФБС 24.4.6, 12.4.6, 9.4.6.</li>
+        <li>Изготовление по ГОСТ.</li>
+        <li>Назначение: ленточные фундаменты, цокольные этажи, подпорные стены.</li>
+      </ul>
+      <p class="price-note">Цена: 950–1400 ₽/шт в зависимости от размера.</p>
+      <p>Можно рассчитать количество блоков по длине/ширине/глубине фундамента.</p>
+      <button class="btn" data-close>Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Кольца -->
+  <div class="modal" id="modal-rings">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Железобетонные кольца</h2>
+      <ul class="tech-list">
+        <li>Диаметры: 1 м, 1.5 м, 2 м.</li>
+        <li>Назначение: колодцы, септики, дренажные колодцы.</li>
+        <li>Возможна комплектация днищами и плитами перекрытия.</li>
+      </ul>
+      <p class="price-note">Цена: 1900–3800 ₽/шт, зависит от диаметра.</p>
+      <p>Манипулятор может опустить кольца в подготовленный котлован.</p>
+      <button class="btn" data-close>Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Погреб -->
+  <div class="modal" id="modal-cellar">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Готовый Ж/б погреб</h2>
+      <ul class="tech-list">
+        <li>Внутренний размер: 2×3×0.7 м.</li>
+        <li>Толщина стенки: 12 см.</li>
+        <li>Монолитный блок, готовый к установке.</li>
+        <li>Монтаж краном-манипулятором на подготовленное основание.</li>
+      </ul>
+      <p class="price-note">Цена: 45 000 ₽ (ориентировочно, уточняется при заказе).</p>
+      <p>Важно предусмотреть подъезд техники и место для разгрузки.</p>
+      <button class="btn" data-close>Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Цемент -->
+  <div class="modal" id="modal-cement">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Цемент</h2>
+      <ul class="tech-list">
+        <li>Марки: М400 / М500.</li>
+        <li>Фасовка: мешки 50 кг, возможен биг-бэг.</li>
+        <li>Подходит для частного и промышленного строительства.</li>
+      </ul>
+      <p class="price-note">Цена: по запросу, зависит от объёма партии.</p>
+      <p>Удобно заказывать вместе с ЖБИ, чтобы сэкономить на доставке.</p>
+      <button class="btn" data-close>Закрыть</button>
+    </div>
+  </div>
+</main>
+
 
   <!-- ПОДВАЛ -->
   <footer class="footer">
     <div class="container">© 2025 Цех ЖБИ</div>
   </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('[data-modal]');
+    const modals = document.querySelectorAll('.modal');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-modal');
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.classList.add('modal--active');
+        }
+      });
+    });
+
+    modals.forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target.hasAttribute('data-close') || e.target.classList.contains('modal__overlay')) {
+          modal.classList.remove('modal--active');
+        }
+      });
+    });
+  });
+</script>
+
 
 </body>
 </html>

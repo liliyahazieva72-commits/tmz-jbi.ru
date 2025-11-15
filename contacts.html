@@ -1,70 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты — Цех ЖБИ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты — Цех ЖБИ</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-    <div class="container header-wrapper">
-        <nav class="nav">
-            <a href="index.html">О компании</a>
-            <a href="products.html">Каталог</a>
-            <a href="delivery.html">Доставка</a>
-            <a href="contacts.html" class="active">Контакты</a>
-        </nav>
-        <img src="images/logo.png" alt="Логотип" class="logo">
-    </div>
-</header>
-
-<main class="container">
-
-    <h2>Контакты</h2>
-
-    <section class="contacts-grid">
-
-        <!-- Левая колонка -->
-        <div class="contacts-block">
-
-            <h3>Адрес</h3>
-            <p>г. Туймазы, Республика Башкортостан</p>
-            <p>ул. Фабричная, 12а, 452757</p>
-
-            <h3>Телефон</h3>
-            <p><a href="tel:+79050040488">8-905-004-04-88</a></p>
-
-            <h3>Email</h3>
-            <p><a href="mailto:info@zbi-example.ru">info@zbi-example.ru</a></p>
-
-            <h3>График работы</h3>
-            <p>Пн–Пт: 9:00–18:00</p>
-
-            <a class="btn-whatsapp" href="https://wa.me/79050040488" target="_blank" rel="noopener">
-                Написать в WhatsApp
-            </a>
-
+  <!-- ШАПКА -->
+  <header>
+    <div class="header-row">
+      <div class="header-left">
+        <img src="images/logo.png" alt="Логотип ЖБИ" class="logo">
+        <div class="header-text">
+          <h1 class="header-title">ЦЕХ ПО ПРОИЗВОДСТВУ И ПРОДАЖЕ ЖБИ</h1>
+          <p class="header-subtitle">20 лет надёжного производства ЖБИ</p>
         </div>
+      </div>
+      <div class="header-phone">
+        <i class="phone-icon">📞</i>
+        <a href="tel:+79050040488" class="phone-number">8-905-004-04-88</a>
+      </div>
+    </div>
 
-        <!-- Правая колонка -->
-        <div class="contacts-map">
+    <div class="header-row2">
+      <nav class="mainnav">
+        <ul class="mainnav__links">
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="products.html">Каталог</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts.html" class="active">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <h3>Карта проезда</h3>
-            <p>Цех расположен в промышленной зоне с удобным подъездом.</p>
+  <!-- КОНТЕНТ -->
+  <main class="container">
+  <h2>Контакты</h2>
 
-            <div class="map-wrapper" style="margin-top: 12px; border-radius: 12px; overflow: hidden;">
-                <!-- РАБОЧИЙ ВИДЖЕТ КАРТЫ -->
-                <iframe
-                    src="https://api-maps.yandex.ru/frame/v1/-/CLGyuM6b"
-                    width="100%"
-                    height="300"
-                    frameborder="0"
-                    allowfullscreen="true">
-                </iframe>
-            </div>
+  <section class="contacts-grid">
+    <div class="contacts-block">
+      <h3>Адрес цеха</h3>
+      <p>г. Туймазы, Республика Башкортостан</p>
+      <p>ул. Фабричная, 12а, 452757</p>
 
-            <p class="map-note" style="margin-top: 8px; color: #66
+      <h3>Телефон</h3>
+      <p><a href="tel:+79050040488">8-905-004-04-88</a></p>
 
+      <h3>Email</h3>
+      <p><a href="mailto:info@zbi-example.ru">info@zbi-example.ru</a></p>
+
+      <h3>Режим работы</h3>
+      <p>Пн–Пт: 9:00–18:00</p>
+
+      <a class="btn-whatsapp" href="https://wa.me/79050040488" target="_blank" rel="noopener">
+        Написать в WhatsApp
+      </a>
+    </div>
+
+    <div class="contacts-map">
+      <h3>Как нас найти</h3>
+      <p>Цех находится в промышленной зоне, удобный подъезд для грузового транспорта.</p>
+
+      <!-- Вставь сюда свою карту (Яндекс / Google). Пример с Яндекс.Картами: -->
+      <div class="map-wrapper">
+  <iframe
+    src="https://api-maps.yandex.ru/frame/v1/-/CLGyuM6b"
+    width="100%"
+    height="300"
+    frameborder="0"
+    allowfullscreen="true">
+  </iframe>
+</div>
+
+
+      <p class="map-note">
+        Для уточнения подъезда и разворота грузового автомобиля просто позвоните заранее.
+      </p>
+    </div>
+  </section>
+</main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="container">© 2025 Цех ЖБИ</div>
+  </footer>
+
+</body>
+</html>

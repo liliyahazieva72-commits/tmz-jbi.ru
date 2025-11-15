@@ -749,4 +749,195 @@ h2::after {
     box-shadow: 0 6px 14px rgba(37, 211, 102, 0.45);
     transform: translateY(-2px);
 }
+/* Сетка каталога */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 24px 0 40px;
+}
 
+.product-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.product-card__img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.product-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.product-card__price {
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* Кнопки */
+.btn,
+.btn-outline {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  background: #ff8800;
+  color: #fff;
+}
+
+.btn-outline {
+  border: 1px solid #ff8800;
+  background: #fff;
+  color: #ff8800;
+}
+
+.btn:hover,
+.btn-outline:hover {
+  opacity: 0.9;
+}
+
+/* Модальные окна */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal--active {
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal__content {
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 16px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 24px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  z-index: 1001;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.tech-list {
+  margin: 12px 0 16px;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.price-note {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Адаптив каталога */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 32px;
+  margin: 24px 0 40px;
+}
+
+.contacts-block h3,
+.contacts-map h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.contacts-block p,
+.contacts-map p {
+  margin: 4px 0 10px;
+  font-size: 14px;
+}
+
+.contacts-block a,
+.contacts-map a {
+  text-decoration: none;
+}
+
+/* WhatsApp-кнопка — зелёная, как просили */
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #25D366;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  opacity: 0.9;
+}
+
+/* Карта */
+.map-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  margin: 10px 0;
+}
+
+.map-note {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Адаптив для контактов */
+@media (max-width: 768px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+}
