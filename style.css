@@ -434,3 +434,42 @@ main {
         font-size: 20px;
     }
 }
+/* Правка шапки под текущую верстку */
+
+/* Делаем фон тёмным и задаём отступы */
+header {
+    background-color: #0d1b2a;
+    padding: 16px 0 20px;
+}
+
+/* Делаем заголовок и подзаголовок светлыми */
+header h1,
+header h2,
+header h3,
+header p {
+    color: #ffffff;
+    margin-left: 16px; /* чуть смещаем от левого края, чтобы не липло */
+}
+
+/* Телефон и пункты меню — оранжевые ссылки */
+header a {
+    color: #ff8800;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Убираем маркеры у списка меню, если он сделан через <ul> */
+header ul {
+    list-style: none;
+    padding-left: 16px;
+    margin: 8px 0 0;
+}
+
+/* Делаем пункты меню с небольшим вертикальным отступом */
+header ul li {
+    margin: 4px 0;
+}
+
