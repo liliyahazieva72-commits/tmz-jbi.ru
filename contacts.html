@@ -1,104 +1,164 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакты — Цех ЖБИ</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="frame">
+
   <!-- ШАПКА -->
-  <header>
-    <div class="header-row">
-      <div class="header-left">
-        <img src="images/logo.png" alt="Логотип ЖБИ" class="logo">
-        <div class="header-text">
-          <h1 class="header-title">ЦЕХ ПО ПРОИЗВОДСТВУ И ПРОДАЖЕ ЖБИ</h1>
-          <p class="header-subtitle">20 лет надёжного производства ЖБИ</p>
-        </div>
-      </div>
-      <div class="header-phone">
-        <i class="phone-icon">📞</i>
-        <a href="tel:+79050040488" class="phone-number">8-905-004-04-88</a>
+  <?php /* если PHP не используете — удалите */ ?>
+
+  <header class="site-header">
+    <div class="header-logo-block">
+      <img src="images/logo.png" alt="Цех ЖБИ" class="header-logo">
+      <div class="header-title">
+        <div class="company-name">ЦЕХ ЖБИ</div>
+        <div class="company-city">г. Туймазы</div>
+        <div class="company-owner">ИП Галиуллин Д.З.</div>
       </div>
     </div>
 
-    <div class="header-row2">
-      <nav class="mainnav">
-        <ul class="mainnav__links">
-          <li><a href="about.html">О компании</a></li>
-          <li><a href="products.html">Каталог</a></li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="contacts.html" class="active">Контакты</a></li>
-        </ul>
-      </nav>
+    <div class="header-values">
+      <div>Надёжность</div>
+      <div>Качество</div>
+      <div>Ответственность</div>
+    </div>
+
+    <div class="header-contacts">
+      <div>📞 <a href="tel:+79050040488">8-905-004-04-88</a></div>
+      <div>🟢 <a href="https://wa.me/79050040488" target="_blank">WhatsApp</a></div>
+      <div>✉️ <a href="mailto:galiullin.dinar@yandex.ru">galiullin.dinar@yandex.ru</a></div>
     </div>
   </header>
 
+  <!-- МЕНЮ -->
+  <nav class="mainnav">
+    <ul class="mainnav__links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="products.html">Каталог</a></li>
+      <li><a href="vacancies.html">Вакансии</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="delivery.html">Доставка</a></li>
+      <li><a href="contacts.html" class="active">Контакты</a></li>
+    </ul>
+  </nav>
+
   <!-- КОНТЕНТ -->
-  <main class="container">
-  <h2>Контакты</h2>
+  <main class="page-content">
 
-  <section class="contacts-grid">
-    <div class="contacts-block">
-      <h3>Адрес цеха</h3>
-      <p>г. Туймазы, Республика Башкортостан</p>
-      <p>ул. Фабричная, 12а, 452757</p>
+  <h1>Контакты</h1>
 
-      <h3>Телефон</h3>
-      <p><a href="tel:+79050040488">8-905-004-04-88</a></p>
+  <div class="contacts-layout">
 
-      <h3>Email</h3>
-      <p><a href="mailto:info@zbi-example.ru">info@zbi-example.ru</a></p>
+    <!-- ЛЕВАЯ КОЛОНКА: текст -->
+    <div class="contacts-info">
+      <h2>Телефон и WhatsApp</h2>
+      <p>
+        Телефон: <a href="tel:+79050040488">8-905-004-04-88</a><br>
+        WhatsApp: <a href="https://wa.me/79050040488" target="_blank">написать сообщение</a>
+      </p>
 
-      <h3>Режим работы</h3>
-      <p>Пн–Пт: 9:00–18:00</p>
+      <h2>E-mail</h2>
+      <p>
+        <a href="mailto:galiullin.dinar@yandex.ru">galiullin.dinar@yandex.ru</a>
+      </p>
 
-      <a class="btn-whatsapp" href="https://wa.me/79050040488" target="_blank" rel="noopener">
-        Написать в WhatsApp
-      </a>
-    </div>
+      <h2>Часы работы</h2>
+      <p>
+        Пн–Пт: 9:00–18:00<br>
+        Сб–Вс: выходные
+      </p>
 
-    <div class="contacts-map">
-      <h3>Как нас найти</h3>
-      <p>Цех находится в промышленной зоне, удобный подъезд для грузового транспорта.</p>
-
-      <!-- Вставь сюда свою карту (Яндекс / Google). Пример с Яндекс.Картами: -->
-      <div id="map" style="width: 100%; height: 400px; margin-top: 20px;"></div>
-
-<script src="https://api-maps.yandex.ru/2.1/?apikey=26b70163-a7fe-4379-9087-1335bf23436b&lang=ru_RU"></script>
-<script>
-    ymaps.ready(function () {
-        var map = new ymaps.Map("map", {
-            center: [54.587698, 53.726081], 
-            zoom: 17
-        });
-
-        var placemark = new ymaps.Placemark([54.587698, 53.726081], {
-            balloonContent: '<strong>Цех по производству ЖБИ</strong><br>Туймазы'
-        }, {
-            preset: 'islands#redIcon'
-        });
-
-        map.geoObjects.add(placemark);
-    });
-</script>
-
-
-
-      <p class="map-note">
-        Для уточнения подъезда и разворота грузового автомобиля просто позвоните заранее.
+      <h2>Как нас найти</h2>
+      <p>
+        Цех ЖБИ расположен по адресу:<br>
+        <strong>г. Туймазы, ул. Фабричная 12А</strong><br><br>
+        Въезд со стороны автодороги, рядом установлен наш фирменный баннер.
       </p>
     </div>
-  </section>
+
+    <!-- ПРАВАЯ КОЛОНКА: карта + баннер -->
+    <div class="contacts-side">
+      <div class="map-wrapper">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=53.726081%2C54.587698&z=16&pt=53.726081,54.587698,pm2rdl"
+          width="100%"
+          height="350"
+          frameborder="0"
+          allowfullscreen="true">
+        </iframe>
+      </div>
+
+      <img src="images/reklama.png" alt="Предорожный баннер Цеха ЖБИ" class="banner-photo">
+    </div>
+
+  </div>
+
 </main>
 
+
   <!-- ПОДВАЛ -->
-  <footer class="footer">
-    <div class="container">© 2025 Цех ЖБИ</div>
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-block">
+        <h3>Наш адрес</h3>
+        <p>
+          Цех ЖБИ<br>
+          ИП Галиуллин Д.З.<br>
+          Республика Башкортостан<br>
+          г. Туймазы, ул. Фабричная 12А<br>
+          Тел.: <a href="tel:+79050040488">8-905-004-04-88</a><br>
+          E-mail: <a href="mailto:galiullin.dinar@yandex.ru">galiullin.dinar@yandex.ru</a>
+        </p>
+      </div>
+
+      <div class="footer-block">
+        <h3>Каталог ЖБИ</h3>
+        <ul>
+          <li>Керамзитные блоки</li>
+          <li>Фундаментные блоки</li>
+          <li>Ж/б кольца</li>
+          <li>Готовые погреба</li>
+          <li>Кирпич</li>
+          <li>Газоблоки</li>
+        </ul>
+      </div>
+
+      <div class="footer-block">
+        <h3>Часы работы</h3>
+        <p>
+          Пн–Пт: 9:00–18:00<br>
+          Сб–Вс: выходные
+        </p>
+      </div>
+
+      <div class="footer-block">
+        <h3>Меню</h3>
+        <ul>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="products.html">Каталог</a></li>
+          <li><a href="vacancies.html">Вакансии</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="bottom">
+      © 2008–2025 Цех ЖБИ, г. Туймазы
+    </div>
   </footer>
+
+</div>
 
 </body>
 </html>
-
