@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tmz-jbi.ru/sitemap.xml
 Host: tmz-jbi.ru
+Sitemap: https://tmz-jbi.ru/sitemap.xml
