@@ -94,7 +94,7 @@ body {
 
 .mainnav {
   background: #ffe6c7;
-  border-bottom: 4px solid #f3b46c;
+  border-bottom: 2px solid #f3b46c;
 }
 
 .mainnav__links {
@@ -803,6 +803,7 @@ footer {
   border-top: 3px solid #f47c20;
   border-bottom: 3px solid #f47c20;
 }
+
 
 
 
