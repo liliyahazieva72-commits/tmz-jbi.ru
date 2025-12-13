@@ -32,7 +32,7 @@ body {
   gap: 24px;
   padding: 16px 24px;
   border-bottom: 4px solid #ff7a00;
-  background-color:  khaki; 
+  background-color: #8A9A5B;
 }
 
 /* Логотип + подпись слева */
@@ -802,6 +802,7 @@ footer {
   border-top: 3px solid #f47c20;
   border-bottom: 3px solid #f47c20;
 }
+
 
 
 
