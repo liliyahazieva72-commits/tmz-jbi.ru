@@ -30,9 +30,9 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  padding: 14px 24px;
-  border-bottom: 4px solid #ff7a00;
-  background-color: #4F5D2F
+  padding: 8px 16px;
+  /*border-bottom: 4px solid #ff7a00;*/
+  background-color: #4F5D2F;
   color: #333;
 }
 
@@ -803,6 +803,7 @@ footer {
   border-top: 3px solid #f47c20;
   border-bottom: 3px solid #f47c20;
 }
+
 
 
 
