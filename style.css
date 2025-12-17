@@ -1026,6 +1026,26 @@ h1::after {
 .site-header {
   border-bottom: 3px solid #f97316;
 }
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ: шапка слева ===== */
+@media (max-width: 768px) {
+
+  header,
+  .header,
+  .header-info,
+  .header-content,
+  .top,
+  .top-info {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  header * {
+    margin-left: 0 !important;
+  }
+
+}
+
+
 
 
 
