@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Host: tmz-jbi.ru
 Sitemap: https://tmz-jbi.ru/sitemap.xml
