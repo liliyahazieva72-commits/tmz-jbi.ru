@@ -1044,7 +1044,63 @@ h1::after {
   }
 
 }
+/* ===== БЕГУЩАЯ СТРОКА С АКЦИЕЙ ===== */
 
+.sale-ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #ffedd5;
+  color: #8b3b09;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sale-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: sale-scroll 35s linear infinite;
+}
+
+.sale-ticker__item {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding-right: 50px;
+}
+
+.sale-ticker s {
+  opacity: 0.65;
+}
+
+.sale-ticker b {
+  color: #c2410c;
+  font-weight: 800;
+}
+
+.sale-ticker:hover .sale-ticker__track {
+  animation-play-state: paused;
+}
+
+@keyframes sale-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sale-ticker__track {
+    animation: none;
+    width: auto;
+  }
+
+  .sale-ticker__item {
+    white-space: normal;
+  }
+
+  .sale-ticker__item:nth-child(2) {
+    display: none;
+  }
+}
 
 
 
